@@ -1,0 +1,24 @@
+{
+	"name": "server",
+	"version": "0.0.1",
+	"description": "Awesome project developed with TypeORM.",
+	"devDependencies": {
+		"@types/node": "^8.0.29",
+		"ts-node": "3.3.0",
+		"typescript": "2.5.2"
+	},
+	"dependencies": {
+		"apollo-server": "^2.1.0",
+		"gql2ts": "^1.10.1",
+		"graphql": "^14.0.2",
+		"graphql-import": "^0.7.1",
+		"nodemon": "^1.18.5",
+		"pg": "^7.3.0",
+		"reflect-metadata": "^0.1.10",
+		"typeorm": "^0.2.8"
+	},
+	"scripts": {
+		"start": "NODE_ENV=development nodemon --exec ts-node src/index.ts",
+		"generate-schema-types": "gql2ts src/model/$MODEL/schemas/schema.graphql -o src/model/$MODEL/schemas/schema.d.ts"
+	}
+}
